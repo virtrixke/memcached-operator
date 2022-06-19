@@ -16,15 +16,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install dependencies
-        run: make
-
-      - name: Run check
-        run: make check
-
-      - name: Run distcheck
-        run: make distcheck
-
       - name: Login container registry
         uses: docker/login-action@v2
         with:
